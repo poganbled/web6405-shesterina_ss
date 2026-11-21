@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация команды — Интеллектуальный клуб</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page">
+    <header class="header">
+        <img src="./images/logo.png" alt="Логотип Самарского университета" class="header__logo">
+        <h1 class="header__title">Интеллектуальный клуб Самарского университета</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">О клубе</a>
+            <a href="schedule.html" class="nav__link">Расписание</a>
+            <a href="rating.html" class="nav__link">Рейтинг команд</a>
+            <a href="rules.html" class="nav__link">Правила игр</a>
+            <a href="register.html" class="nav__link nav__link_active">Регистрация</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <h2 class="section__title section__title_center fade-in">Заявка на участие в турнире</h2>
+            <p class="section__text section__text_center fade-in fade-in_delay-1">Заполните форму ниже, чтобы зарегистрировать команду на ближайший тур Студенческой лиги.</p>
+
+
+            <form id="team-form" class="form">
+                <div class="form__group fade-in fade-in_delay-2">
+                    <label for="teamName" class="form__label">Название команды:</label>
+                    <input type="text" id="teamName" class="form__input" placeholder="Например: Коши для души" required>
+                </div>
+
+                <div class="form__group fade-in fade-in_delay-3">
+                    <label for="captainEmail" class="form__label">Email капитана:</label>
+                    <input type="email" id="captainEmail" class="form__input" placeholder="captain@ssau.ru" required>
+                </div>
+
+                <div class="form__group fade-in fade-in_delay-4">
+                    <label for="playersCount" class="form__label">Количество игроков (от 1 до 6):</label>
+                    <input type="number" id="playersCount" class="form__input" min="1" max="6" value="6" required>
+                </div>
+
+                <div class="form__group fade-in fade-in_delay-5">
+                    <label for="discipline" class="form__label">Дисциплина:</label>
+                    <select id="discipline" class="form__input">
+                        <option value="Спортивное ЧГК">Спортивное «Что? Где? Когда?»</option>
+                        <option value="Брейн-ринг">Брейн-ринг</option>
+                        <option value="Эрудит-квартет">Эрудит-квартет</option>
+                    </select>
+                </div>
+
+                <div class="form__group form__group_row fade-in fade-in_delay-6">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="form__submit fade-in fade-in_delay-7">Отправить заявку</button>
+                <p id="form-status" class="form__status"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
