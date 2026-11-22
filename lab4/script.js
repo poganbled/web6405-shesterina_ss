@@ -12,7 +12,7 @@ class TeamRegistration {
         console.group('Новая заявка в Интеллектуальный клуб SSAU');
         console.log(`Команда: ${this.teamName}`);
         console.log(`Email капитана: ${this.captainEmail}`);
-        console.log(`Состав: ${this.playersCount} чел.`);
+        console.log(`Состав: ${this.playersCount} человек`);
         console.log(`Дисциплина: ${this.discipline}`);
         console.log(`Согласие на обработку ПД: ${this.isAgreed ? 'Да' : 'Нет'}`);
         console.log(`Время подачи: ${this.createdAt}`);
@@ -23,8 +23,6 @@ class TeamRegistration {
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('team-form');
     const statusText = document.getElementById('form-status');
-
-    if (!form) return;
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
